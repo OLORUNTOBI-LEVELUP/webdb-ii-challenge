@@ -35,7 +35,7 @@ server.get('/cars/:id', async (req, res) => {
         } else {
             res.status(404).json({ message: 'car with that id is not found' })
         }
-        // res.status(200).json(car)
+        
     } catch {
         res.status(500).json({ message: 'could not get car by id' })
     }

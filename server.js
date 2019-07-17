@@ -10,7 +10,8 @@ function getAllCars() {
 }
 
 function getCarById(id){
-    return db('cars').where({ id });
+    return db('cars')
+    .where({ id }).first();
 }
 
 function createNewCar({ vin, make, model, mileage, transmission_type, transmission_style }){
